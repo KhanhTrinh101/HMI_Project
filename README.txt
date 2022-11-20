@@ -1,5 +1,5 @@
-tác giả: Khánh Trình (TrinhLK)
-gmail: khanhtrinh102uuu@gmail.com
+Tác giả: Khánh Trình (TrinhLK)
+Địa chỉ email: khanhtrinh102uuu@gmail.com
 ** Tổng quan:
 - Phần mền được viết trên Qt Creator 15.5 và build trên linux ubuntu 20.4
 - Home là ứng dụng quan trọng trong hệ thống thông tin giải trí trên xe
