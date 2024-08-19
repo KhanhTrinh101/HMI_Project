@@ -1,9 +1,9 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include <QMediaPlaylist>
+//#include <QMediaPlaylist>
 #include <QQmlContext>
-#include "App/Media/player.h"
-#include "App/Media/playlistmodel.h"
+//#include "App/Media/player.h"
+//#include "App/Media/playlistmodel.h"
 #include "App/Climate/climatemodel.h"
 #include "applicationsmodel.h"
 #include "xmlreader.h"
@@ -13,26 +13,27 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    qRegisterMetaType<QMediaPlaylist*>("QMediaPlaylist*");
-    qRegisterMetaType<QMediaPlaylist::PlaybackMode>("QMediaPlaylist::PlaybackMode");
+//    qRegisterMetaType<QMediaPlaylist*>("QMediaPlaylist*");
+//    qRegisterMetaType<QMediaPlaylist::PlaybackMode>("QMediaPlaylist::PlaybackMode");
 
-    QGuiApplication app(argc, argv); // giao dien ben tren phan mem
-    QQmlApplicationEngine engine; // load cac thanh phan ben duoi phan mem
+    QGuiApplication app(argc, argv);
+    QQmlApplicationEngine engine;
 
-    // tao mot danh sach luu tru cac ung dung
+    /* Initalize APP model */
     ApplicationsModel appsModel;
     engine.rootContext()->setContextProperty("appsModel", &appsModel);
 
-    // doc tat ca thong tin tu file applications.xml vao danh sach ung dung appsModel
+    /* Read all information is wrote in file .XML */
+    /* Read this information from file to APPs model*/
     QString xmlfile = "applications.xml";
     QString Part = QString(PROJECT_PATH) + xmlfile;
     XmlReader xmlReader(Part, appsModel);
 
-    // khoi tao du lieu cho model choi nhac
-    Player player;
-    engine.rootContext()->setContextProperty("myModel",player.getPlaylistModel());
-    engine.rootContext()->setContextProperty("player",player.getPlayer());
-    engine.rootContext()->setContextProperty("utility",&player);
+    /* Initalize the player that can control media */
+//    Player player;
+//    engine.rootContext()->setContextProperty("myModel",player.getPlaylistModel());
+//    engine.rootContext()->setContextProperty("player",player.getPlayer());
+//    engine.rootContext()->setContextProperty("utility",&player);
 
     // khoi tao du lieu cho model dieu hoa khong khi
     ClimateModel climate;

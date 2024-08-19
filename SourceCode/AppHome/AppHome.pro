@@ -51,7 +51,7 @@ HEADERS += \
     xmlreader.h \
     xmlwriter.h
 
-LIBS += -ltag
+#LIBS += -ltag
 
 DISTFILES += \
     Dbus/climate.xml \
