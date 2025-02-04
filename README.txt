@@ -1,2 +1,2 @@
 Author: TrinhLK1
-Home application is a tool help user can move to other sub application.
+HMI is a home screen which help user can execute other features.
